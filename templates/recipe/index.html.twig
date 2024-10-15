@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{# {%block title%}Toutes les recettes{%endblock%} #}
+{% block title "Toutes les recettes" %}
+{% block body %}
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut debitis dicta dignissimos, ex placeat quam repellat similique? Aut deserunt doloremque facere nisi, quidem ut veniam. Accusantium adipisci at aut, commodi eius et eum, expedita facilis inventore iste itaque iure laboriosam natus nobis numquam ratione rerum sequi soluta totam voluptatum. Ipsum.
+    </p>
+    <h2>Total des durées des recettes : {{totalDuration}}</h2>
+    <ul>
+        {% for recipe in recipes %}
+        <li>
+            <a href="{{path("recipe.show",{id:recipe.id,slug:recipe.slug})}}">{{recipe.title}}</a>
+        </li>
+        {% endfor%}
+    </ul>
+{% endblock %}

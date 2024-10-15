@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block title "Recette: " ~ recipe.title %}
+{% block body %}
+    <h1>{{recipe.title}}</h1>
+    {{form(recipeform)}}
+
+   {# {{form_start(recipeform)}}
+    <div class="d-flex">
+        {{form_row(recipeform.title)}}
+        {{form_row(recipeform.duration)}}
+    </div>
+    {{form_end(recipeform)}} #}
+{% endblock %}

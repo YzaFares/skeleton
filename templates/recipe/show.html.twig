@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{# {%block title%}Toutes les recettes{%endblock%} #}
+{% block title "Recette: " ~ recipe.title %}
+{% block body %}
+    {#{{slug | upper}} {{person.firstname ~ ' ' ~ person.lastname}}#}
+    <h1>{{recipe.title}}</h1>
+    <p>
+        {#filter pour les saut de lignes#}
+        {{recipe.content | nl2br}}
+    </p>
+{% endblock %}
